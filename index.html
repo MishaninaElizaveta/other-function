@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knowlege base</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/choices.min.css">
+  <link rel="stylesheet" href="css/justValidateTooltip.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/choices.min.js" defer></script>
+  <script src="js/inputmask.min.js" defer></script>
+  <script src="js/just-validate.min.js" defer></script>
+  <script src="js/index.js" defer></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" defer></script>
+  <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js" defer></script>
+</head>
+
+<body>
+  <div class="custom__checkbox" tabindex="0">
+    <h2 class="custom__title">
+      Категории:
+    </h2>
+    <label for="check-one" class="custom__label">
+      <input type="checkbox" name="check" id="check-one" class="custom__input">
+      Динозавры
+      <span></span>
+    </label>
+    <label for="check-two" class="custom__label">
+      <input type="checkbox" name="check" id="check-two" class="custom__input">
+      Медведи
+      <span></span>
+    </label>
+    <label for="check-three" class="custom__label">
+      <input type="checkbox" name="check" id="check-three" class="custom__input">
+      Косули
+      <span></span>
+    </label>
+    <label for="check-four" class="custom__label">
+      <input type="checkbox" name="check" id="check-four" class="custom__input">
+      Лисы
+      <span></span>
+    </label>
+    <label for="check-five" class="custom__label">
+      <input type="checkbox" name="check" id="check-five" class="custom__input">
+      Волки
+      <span></span>
+    </label>
+    <label for="check-six" class="custom__label">
+      <input type="checkbox" name="check" id="check-six" class="custom__input">
+      Олени и лоси
+      <span></span>
+    </label>
+  </div>
+
+  <select name="select" aria-label="Выбор материала">
+    <option value="">Материал</option>
+    <option value="1">Древесина</option>
+    <option value="2">Металл</option>
+    <option value="3">Камень</option>
+    <option value="4">Пластик</option>
+    <option value="5">Композитный</option>
+    <option value="6">Гипс</option>
+  </select>
+
+  <div id="myMap1" style="width: 460px; height: 460px" tabindex="0"></div>
+
+  <div class="tooltip">
+    <div class="tooltip__marker">
+      <svg class="tooltip__mark" tabindex="0" width="16" height="16" viewBox="0 0 16 16" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM8 3C7.33333 3 7 3.31919 7 3.95758C7 4.60026 7.33333 4.92159 8 4.92159C8.33333 4.92159 8.58233 4.83805 8.74699 4.67095C8.91566 4.49957 9 4.26178 9 3.95758C9 3.31919 8.66667 3 8 3ZM7.07831 13H8.91566V5.81491H7.07831V13Z"
+          fill="#BCBCBC" />
+      </svg>
+    </div>
+    <div class="tooltip__popup">
+      Глава&nbsp;2, страница 176
+    </div>
+    <p class="tooltip__descr">
+      Следует отметить, что социально-экономическое развитие способствует повышению качества переосмысления
+      внешнеэкономических политик.</p>
+  </div>
+
+  <div class="scroll" data-simplebar>
+    Сложно сказать, почему многие известные личности представлены в&nbsp;исключительно положительном свете. Лишь активно
+    развивающиеся страны третьего мира будут объективно рассмотрены соответствующими инстанциями. Мы&nbsp;вынуждены
+    отталкиваться от&nbsp;того, что высокотехнологичная концепция общественного уклада представляет собой интересный
+    эксперимент проверки глубокомысленных рассуждений. Имеется спорная точка зрения, гласящая примерно следующее:
+    непосредственные участники технического прогресса освещают чрезвычайно интересные особенности картины в&nbsp;целом,
+    однако конкретные выводы, разумеется, обнародованы. Значимость этих проблем настолько очевидна, что
+    социально-экономическое развитие, а&nbsp;также свежий взгляд на&nbsp;привычные вещи&nbsp;&mdash; безусловно
+    открывает новые горизонты для первоочередных требований.
+  </div>
+
+  <form action="" class="form">
+    <label for="name" class="form__label"></label>
+    <div class="just-validate-tooltip-container">
+      <input type="text" name="name" placeholder="Имя*" class="form__name form__field" data-validate-field="name">
+    </div>
+    <label for="tel" class="form__label"></label>
+    <div class="just-validate-tooltip-container">
+      <input type="tel" name="tel" placeholder="Телефон*" class="form__tel form__field" data-validate-field="tel"
+        data-validate-rules="phone">
+    </div>
+    <label for="email" class="form__label"></label>
+    <div class="just-validate-tooltip-container">
+      <input type="email" name="email" placeholder="E-mail*" class="form__email form__field"
+        data-validate-field="email">
+    </div>
+    <button class="form__button">Заказать</button>
+  </form>
+</body>
+
+</html>
